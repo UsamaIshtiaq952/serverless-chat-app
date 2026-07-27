@@ -1,0 +1,879 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    min-height:100vh;
+}
+
+a{
+    text-decoration:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+/* ==========================
+   Auth Container
+========================== */
+
+.auth-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.auth-card{
+
+    width:100%;
+    max-width:420px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   Heading
+========================== */
+
+.auth-card h1{
+
+    text-align:center;
+
+    color:#4f46e5;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Form
+========================== */
+
+.auth-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.auth-card input{
+
+    padding:15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.auth-card input:focus{
+
+    border-color:#4f46e5;
+
+    box-shadow:
+    0 0 0 4px rgba(79,70,229,.15);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.auth-card button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#4f46e5;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.auth-card button:hover{
+
+    background:#4338ca;
+
+}
+
+/* ==========================
+   Bottom Text
+========================== */
+
+.switch-page{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#6b7280;
+
+}
+
+.switch-page a{
+
+    margin-left:6px;
+
+    color:#4f46e5;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:480px){
+
+.auth-card{
+
+padding:30px 25px;
+
+}
+
+.auth-card h1{
+
+font-size:28px;
+
+}
+
+}
+
+
+
+/* ==========================
+   Home
+========================== */
+
+.home{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+    height:70px;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.navbar h2{
+    color:#4f46e5;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-right span{
+    font-weight:600;
+}
+
+.nav-right button{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-right button:hover{
+    background:#dc2626;
+}
+
+/* ==========================
+   Chat Layout
+========================== */
+
+.chat-layout{
+    flex:1;
+    display:flex;
+}
+
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar{
+
+    width:300px;
+
+    background:#ffffff;
+
+    border-right:1px solid #e5e7eb;
+
+    padding:20px;
+
+}
+
+.sidebar h3{
+
+    margin-bottom:25px;
+
+}
+
+.chat-user{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.chat-user:hover{
+
+    background:#eef2ff;
+
+}
+
+.chat-user h4{
+
+    margin-bottom:5px;
+
+}
+
+.chat-user p{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+
+
+/* ==========================
+   Chat Window
+========================== */
+
+.chat-window{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#f8fafc;
+
+}
+
+.messages{
+
+    flex:1;
+
+    padding:30px;
+
+    overflow-y:auto;
+
+}
+
+
+.message{
+
+    max-width:320px;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+}
+
+.received{
+
+    background:white;
+
+    align-self:flex-start;
+
+}
+
+.sent{
+
+    background:#4f46e5;
+
+    color:white;
+
+    margin-left:auto;
+
+}
+
+/* ==========================
+   Input Area
+========================== */
+
+.message-input{
+
+    background:white;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:15px;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.message-input input{
+
+    flex:1;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #d1d5db;
+
+    outline:none;
+
+}
+
+.message-input button{
+
+    background:#4f46e5;
+
+    color:white;
+
+    border:none;
+
+    padding:0 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+@media(max-width:900px){
+
+.sidebar{
+
+display:none;
+
+}
+
+.nav-right span{
+
+display:none;
+
+}
+
+}
+
+
+.message{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+.message small{
+
+    font-size:12px;
+
+    opacity:.7;
+
+}
+
+.message p{
+
+    margin:0;
+
+}
+
+.active-user{
+
+background:#4f46e5;
+
+color:white;
+
+}
+
+.active-user p{
+
+color:white;
+
+}
+
+/* ==========================
+   Chat Header
+========================== */
+
+.chat-header{
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 25px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.chat-header h3{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 30px;
+
+    background:#111827;
+    color:white;
+
+}
+
+
+.logo{
+
+    font-size:24px;
+    font-weight:600;
+
+}
+
+
+
+.nav-right{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+
+
+.profile-link{
+
+    color:white;
+    text-decoration:none;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    transition:0.3s;
+
+}
+
+
+.profile-link:hover{
+
+    background:#2563eb;
+
+}
+
+
+
+.user-email{
+
+    color:#d1d5db;
+    font-size:14px;
+
+}
+
+
+
+.logout-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:9px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+}
+
+
+.profile-container{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.profile-card{
+
+    width:350px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    text-align:center;
+
+}
+
+
+
+.avatar{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    margin:auto;
+
+}
+
+
+
+.profile-info{
+
+    margin-top:20px;
+
+    text-align:left;
+
+}
+
+
+
+.profile-info p{
+
+    margin-bottom:15px;
+
+    color:#374151;
+
+}
+
+
+
+.edit-btn{
+
+    margin-top:20px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+.profile-card{
+    position: relative;
+    width:420px;
+    margin:50px auto;
+    background:#fff;
+    padding:40px 35px 35px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.back-btn{
+    position:absolute;
+    top:20px;
+    left:20px;
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    padding:8px 14px;
+
+    background:#f3f4f6;
+    color:#2563eb;
+
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+
+    border-radius:8px;
+
+    transition:all .3s ease;
+}
+
+.back-btn:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.info-item{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.info-item label{
+    font-weight:600;
+    color:#374151;
+}
+
+.info-item input,
+.info-item textarea{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    resize:none;
+}
+
+.info-item input:focus,
+.info-item textarea:focus{
+
+    border-color:#4f46e5;
+}
+
+.info-item input:disabled{
+
+    background:#f3f4f6;
+
+    cursor:not-allowed;
+}
+
+
+/* =========================================
+   Back Home Button
+========================================= */
+
+.profile-container{
+    position:relative;
+}
+
+.back-home-btn{
+
+    position:absolute;
+
+    top:30px;
+    left:30px;
+
+    background:#ffffff;
+
+    color:#4f46e5;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    border:1px solid #e5e7eb;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.back-home-btn:hover{
+
+    background:#4f46e5;
+
+    color:#ffffff;
+}
+
+/* =========================================
+   Password Field
+========================================= */
+
+.password-field{
+    position:relative;
+    width:100%;
+}
+
+.password-field input{
+    width:100%;
+    padding:14px 45px 14px 16px;
+}
+
+.toggle-password{
+    position:absolute;
+    top:50%;
+    right:12px;
+    transform:translateY(-50%);
+
+    width:28px;
+    height:28px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:transparent;
+    border:none;
+
+    font-size:16px;
+
+    color:#6b7280;
+
+    cursor:pointer;
+
+    transition:0.2s ease;
+}
+
+.toggle-password:hover{
+    color:#4f46e5;
+    transform:translateY(-50%) scale(1.1);
+}
